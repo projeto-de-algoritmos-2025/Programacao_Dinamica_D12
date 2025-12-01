@@ -27,40 +27,29 @@
 
 ## Exercício 1 - Longest Valid Parentheses
 ### Descrição
-Este exercício envolve um conjunto de trabalhos, cada um com hora de início, hora de término e lucro, e precisa encontrar o maior lucro possível selecionando um subconjunto de trabalhos sem sobreposição de tempo, permitindo iniciar um trabalho exatamente quando outro termina (se um termina em X, outro pode começar em X). O problema é uma versão do Interval Scheduling e pode ser resolvido com programação dinâmica combinada com busca binária, ordenasndo os trabalhos pelo término e, para cada trabalho, some seu lucro ao melhor resultado do último trabalho que termina antes ou em seu início.
-
+O problema pede para calcular o comprimento da maior sequência contínua de parênteses bem formados dentro de uma string que contém apenas os caracteres '(' e ')', ou seja, deve-se encontrar o tamanho numérico do maior trecho da string onde a estrutura de abertura e fechamento dos parênteses está gramaticalmente correta.
 
 - Dificuldade: Difícil
 - Link: https://leetcode.com/problems/longest-valid-parentheses/description/?envType=problem-list-v2&envId=dynamic-programming
-- Solução: [Código]()
+- Solução: [Código](LongestValid.py)
 
-## Exercício 2 - Divide Intervals Into Minimum Number of Groups
+## Exercício 2 - Trapping Rain Water
 ### Descrição
-Este exercício envolve um conjunto de intervalos inclusivos [left, right], sendo preciso dividi-lós em um ou mais grupos de forma que cada intervalo pertença a exatamente um grupo e nenhum par de intervalos do mesmo grupo se intercepte.
-O objetivo é retornar o número mínimo de grupos necessários, esse mínimo equivale ao máximo de intervalos ativos ao mesmo tempo.
-Para a solução utilizamos o min-heap para ordenar por início e manter um heap com os finais ativos, removendo finais < início_atual; o tamanho máximo do heap é a resposta.
-
-![](Documentos/screenshots/imagem02.png)
-
-- Dificuldade: Média
-- Link:https://leetcode.com/problems/divide-intervals-into-minimum-number-of-groups/description/
-- Solução: [Código](DivideIntervals.py)
+O problema consiste em calcular o volume total de água pluvial que pode ser retido em um mapa de elevação, representado por um vetor de números inteiros não negativos onde cada elemento corresponde à altura de uma barra de largura unitária. O objetivo é determinar quantas unidades de água ficam aprisionadas nas depressões formadas entre as elevações após a chuva, considerando que o nível da água em qualquer posição é limitado fisicamente pela menor das alturas máximas existentes em suas extremidades laterais (esquerda e direita).
 
 
-## Exercicio 3 - Non-overlapping Intervals
+- Dificuldade: Dificil
+- Link: https://leetcode.com/problems/trapping-rain-water/description/?envType=problem-list-v2&envId=dynamic-programming
+- Solução: [Código](TrappingWater.py)
+
+
+## Exercicio 3 - Jump Game II
 ### Descrição
-Dado um vetor (array) de intervalos _intervals_, onde *intervals[i] = [start_i, end_i]*, retorne o número mínimo de intervalos que você precisa remover para que os demais não se sobreponham.
+O problema propõe determinar o número mínimo de saltos necessários para alcançar o último índice de um vetor de inteiros não negativos, partindo da posição inicial (índice 0). Cada elemento do vetor define o alcance máximo permitido para um salto a partir daquela posição específica (ou seja, do índice i pode-se avançar para qualquer índice até i + nums[i]), sendo garantido pelo enunciado que o destino final é sempre acessível.
 - Dificuldade: Média
-- Link: https://leetcode.com/problems/non-overlapping-intervals/description/
-- Solução: [Código](NonOverlapping.py)
+- Link: https://leetcode.com/problems/jump-game-ii/description/?envType=problem-list-v2&envId=dynamic-programming
+- Solução: [Código](JumpGameII.py)
 
-## Exercicio 4 - Partition Equal Subset Sum
-### Descrição
-Dado um vetor de inteiros _nums_, retorne _true_ se for possível particioná-lo em dois subconjuntos tais que a soma dos elementos em ambos seja igual; caso contrário, retorne _false_.
-
-- Dificuldade: Média
-- Link: https://leetcode.com/problems/partition-equal-subset-sum/description/
-- Solução: [Código](PartitionEqual.py)
 
 ## Apresentação 
 [Vídeo](https://youtu.be/daqUy7FKlzM)
